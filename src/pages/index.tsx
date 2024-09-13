@@ -113,7 +113,7 @@ export default function Home() {
               return (
                 <div key={index} className={styles["entry"] + " " + styles["row"]}>
                   <div className={styles["timespan"]}>
-                   {exp.startDate} - {exp.endDate}
+                   {exp.endDate} - {exp.startDate}
                   </div>
                   <div className={styles["ico"]}>
                     <div className={styles["entry-dot"]} ></div>
