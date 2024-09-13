@@ -115,7 +115,7 @@ Looking back, each project taught me something new about the power of technology
         <title>{profile.name}</title>
         <meta name="description" content={"Profile page of " + profile.name} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="img/profile.jpeg" />        
       </Head>
       <div className={styles["portfolio-container"]}>
         <div id="dhead" className="container">
