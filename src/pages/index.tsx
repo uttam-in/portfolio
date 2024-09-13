@@ -9,7 +9,7 @@ export default function Home() {
     github: "https://github.com/uttam-in",
     experience: [
       {
-        "company": "UNT",
+        "company": "At UNT - University of North Texas, Masters in Advanced Data Analytics",
         "role": "Advanced Data Analytics",
         "startDate": "2024",
         "endDate": "2025",
