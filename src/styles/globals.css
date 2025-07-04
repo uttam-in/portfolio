@@ -1,19 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 body {
   margin: 0;
   padding: 0;
-  background-color: white;
-  font-family: sans-serif;
+  background-color: #f8f9fa;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
-  line-height: 1.4;
-  color: #333;
+  line-height: 1.6;
+  color: #2d3748;
 }
 
 /* Layout */
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
 }
 @media (min-width: 992px) {
   .container {
@@ -27,7 +30,57 @@ body {
 
 /* Props */
 #dhead {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.intro-text {
+  color: #4a5568;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
   margin-top: 20px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #3182ce;
+}
+
+.role-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 8px 0;
+}
+
+.emoji-icons {
+  display: inline-block;
+  margin-left: 5px;
 }
 #dpic {
   grid-column: span 6;
@@ -50,18 +103,19 @@ body {
   }
 }
 h1 {
-  font-size: 34px;
-  font-weight: normal;
+  font-size: 38px;
+  font-weight: 700;
   padding: 0;
   margin: 0;
+  color: #1a202c;
+  letter-spacing: -0.5px;
 }
 h2 {
-  font-weight: normal;
-  font-style: italic;
-  color: #999;
-  font-size: 18px;
+  font-weight: 500;
+  color: #4a5568;
+  font-size: 20px;
   padding: 0;
-  margin: 5px 0 10px 0;
+  margin: 8px 0 15px 0;
 }
 @media (min-width: 992px) {
   h2 {
@@ -72,10 +126,18 @@ h2 {
   width: 240px;
   height: 240px;
   border-radius: 120px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 4px solid white;
 }
 .iico {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
+  margin: 0 8px;
+  transition: transform 0.2s ease;
+}
+
+.iico:hover {
+  transform: translateY(-3px);
 }
 #demail {
   margin-top: 10px;
@@ -85,18 +147,24 @@ h2 {
 }
 hr {
   height: 1px;
-  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.2), rgba(0,0,0,0));
   padding: 0;
-  margin: 20px 0px 20px 0px;
+  margin: 30px 0px;
   border: 0;
+}
+
+.section-divider {
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.2), rgba(0,0,0,0));
+  padding: 0;
+  margin: 40px 0px;
+  border: 0;
+  width: 100%;
 }
 .ico {
   grid-column: span 1;
   vertical-align: top;
-  border-left: 2px solid #cfcfcf;
+  border-left: 2px solid #3182ce;
   position: relative;
 }
 .ico img {
@@ -109,27 +177,29 @@ hr {
   grid-column: span 10;
   vertical-align: top;
   font-size: 17px;
-  padding-left: 20px;
-  padding-bottom: 20px;
+  padding-left: 25px;
+  padding-bottom: 30px;
+  line-height: 1.7;
 }
-.entry {
-}
+/* Timeline entry container */
 .entry-dot {
   position: absolute;
   top: 0px;
   left: -8px;
-  width: 10px;
-  height: 10px;
-  border-radius: 7px;
-  background-color: #cfcfcf;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #3182ce;
   border: 2px solid white;
+  box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2);
 }
 .timespan {
   grid-column: span 1;
   font-size: 14px;
+  font-weight: 600;
   text-align: right;
-  padding-right: 5px;
-  color: #bbb;
+  padding-right: 10px;
+  color: #718096;
 }
 .hassets {
   position: relative;
@@ -202,8 +272,7 @@ hr {
   float: left;
   margin-right: 10px;
 }
-.pdesc {
-}
+/* Project description */
 .pend {
   clear: both;
 }

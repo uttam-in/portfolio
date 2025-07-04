@@ -1,17 +1,25 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
 }
 @media (min-width: 992px) {
   .container {
       width: 970px;
    }
 }
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
 .row {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
 }
 
 /* Props */
@@ -19,8 +27,15 @@
   margin-top: 20px;
 }
 #dpic {
+  border-radius: 50% !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 4px solid white;
+  transition: transform 0.3s ease;
   grid-column: span 6;
   text-align: right;
+}
+#dpic:hover {
+  transform: scale(1.03);
 }
 #ddesc {
   padding-top: 40px;
@@ -29,8 +44,15 @@
 }
 @media (max-width: 991px) {
   #dpic {
+    border-radius: 50% !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 4px solid white;
+    transition: transform 0.3s ease;
     grid-column: span 12;
     text-align: center;
+  }
+  #dpic:hover {
+    transform: scale(1.03);
   }
   #ddesc {
     grid-column: span 12;
@@ -60,7 +82,6 @@
 #dpic img {
   width: 240px;
   height: 240px;
-  border-radius: 120px;
 }
 .iico {
   width: 40px;
@@ -89,10 +110,16 @@
   position: relative;
 }
 .ico img {
-  border-radius: 5px;
+  border-radius: 8px;
   width: 100%;
   max-width: 80px;
   margin-left: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.ico img:hover {
+  transform: scale(1.05);
 }
 .desc {
   grid-column: span 10;
@@ -102,6 +129,11 @@
   padding-bottom: 20px;
 }
 .entry {
+  margin-bottom: 15px;
+  transition: transform 0.2s ease;
+}
+.entry:hover {
+  transform: translateX(5px);
 }
 .entry-dot {
   position: absolute;
@@ -191,8 +223,7 @@
   float: left;
   margin-right: 10px;
 }
-.pdesc {
-}
+/* Project description styling */
 .pend {
   clear: both;
 }
